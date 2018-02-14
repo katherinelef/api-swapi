@@ -34,11 +34,11 @@ function addPeople(){
   let skinColor = document.createElement('li');
   let TheGender = document.createElement('li');
 
-  liTitle.innerText = names;
-  birth.innerText = birthday;
-  hairColor.innerText = hair;
-  skinColor.innerText = skin;
-  TheGender.innerText = gender;
+  liTitle.innerText = `Name: ${names}`;
+  birth.innerText = `Birthday: ${birthday}`; 
+  hairColor.innerText = `Hair color: ${hair}`;
+  skinColor.innerText = `Skin color: ${skin}`;
+  TheGender.innerText = `Gender : ${gender}`;
 
   name.appendChild(liTitle);
   name.appendChild(birth);
