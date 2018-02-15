@@ -4,7 +4,7 @@ const responseContainer = document.getElementById('response-container');
 window.onload = begin();
 
 function begin (){
-  for(i=1; i<20; i++)
+  for(i=1; i<88; i++)
 getPeople()
 }
   
