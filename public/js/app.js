@@ -3,24 +3,24 @@ const responseContainer = document.getElementById('response-container');
 
 window.onload = begin();
 
-function begin (){
-  for(i=1; i<88; i++)
-getPeople()
+function begin() {
+  for (i = 1; i < 88; i++)
+    getPeople()
 }
   
 function getPeople() {
   const articleRequest = new XMLHttpRequest();
-  articleRequest.open('GET',`https://swapi.co/api/people/${i}`);
+  articleRequest.open('GET', `https://swapi.co/api/people/${i}`);
   articleRequest.onload = addPeople;
   articleRequest.onerror = handleError;
   articleRequest.send();
-    }
+}
 
-function handleError(){
+function handleError() {
   console.log('se ha presentado un error');
 }
 
-function addPeople(){
+function addPeople() {
   const data = JSON.parse(this.responseText);
   console.log(data);
   let names = data.name;
@@ -50,6 +50,4 @@ function addPeople(){
   name.appendChild(skinColor);
   name.appendChild(TheGender);
   responseContainer.appendChild(name);
-
-
 }
