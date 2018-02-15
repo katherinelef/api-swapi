@@ -1,11 +1,13 @@
 const btn = document.getElementById('search');
 const responseContainer = document.getElementById('response-container');
 
-btn.addEventListener('click',function () {
-   for(i=1; i<20; i++)
-getPeople() 
-});
+window.onload = begin();
 
+function begin (){
+  for(i=1; i<20; i++)
+getPeople()
+}
+  
 function getPeople() {
   const articleRequest = new XMLHttpRequest();
   articleRequest.open('GET',`https://swapi.co/api/people/${i}`);
@@ -28,6 +30,8 @@ function addPeople(){
   let gender = data.gender; 
 
   let name = document.createElement('ul');
+  name.classList.add('details');
+  name.classList.add('col-md-2');
   let liTitle = document.createElement('li');
   let birth = document.createElement('li');
   let hairColor = document.createElement('li');
